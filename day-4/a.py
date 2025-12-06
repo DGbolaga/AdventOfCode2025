@@ -1,10 +1,8 @@
-
 def  get_rolls(arr_2d):
     # arr_2d contains string of paper rolls.
     ans = 0
     n = len(arr_2d)
     m = len(arr_2d[0])
-    
     for i in range(1, n-1):
         for j in range(1, m-1):
             if arr_2d[i][j] == '@':
@@ -25,13 +23,9 @@ def  get_rolls(arr_2d):
                     adj_roll_paper += 1
                 if arr_2d[i][j-1] == '@': #left
                     adj_roll_paper += 1
-
                 if adj_roll_paper < 4:
                     ans += 1
     return ans
-    
-
-
 
 if __name__ == "__main__":
     with open("input.txt", "r") as file:
@@ -43,6 +37,4 @@ if __name__ == "__main__":
             new_string = '.' + ch.rsplit().pop() + '.'
             arr_2d.append(new_string)
         arr_2d.append(top_string)
-
-
     print(get_rolls(arr_2d))
