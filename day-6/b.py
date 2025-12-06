@@ -5,8 +5,6 @@ if __name__ == "__main__":
         input = file.readlines()
     n = len(input[0])-1 # excluding '\n'
     m = len(input)
-    result = 0
-    print(input)
 
     sign = deque(input[-1].split())
     store = []
@@ -41,8 +39,6 @@ if __name__ == "__main__":
             ans += s
         else:
             ans += sum(arr)
-
-
     print(ans)
         
 
